@@ -21,6 +21,7 @@
   </head>
   <body>
     <h1>테이블 관련 요소</h1>
+    <h2>테이블 기본 요소</h2>
     <table>
       <caption>
         멋쟁이 사자처럼 프론트엔드 스쿨 13기 스탭
@@ -67,6 +68,44 @@
           <td colspan="2">&nbsp;</td>
         </tr>
       </tbody>
+    </table>
+    <h2>테이블 예제</h2>
+    <table>
+      <!-- <caption>
+        멋쟁이 사자처럼 학습 및 교육안내
+      </caption> -->
+      <caption class="sr-only">
+        입문자를 위한 Git과 HTML & CSS과정
+        <span
+          >학습시간, 난이도, 교육비지원, 평가항목, 수료기준, 정원, 교재 정보
+          등을 나타내는 표</span
+        >
+      </caption>
+      <tr>
+        <th id="learntime">학습시간</th>
+        <td headers="learntime">09:00~17:00&lpar;28시간&rpar;</td>
+        <th id="level">난이도</th>
+        <td headers="level">초급</td>
+      </tr>
+      <tr>
+        <th id="learnmn">교육비 지원</th>
+        <td headers="learnmn">고용보험 비환급</td>
+        <th id="eduitem">평가항목</th>
+        <td headers="eduitem">출석률 100&percnt;</td>
+      </tr>
+      <tr>
+        <th id="standard">수료기준</th>
+        <td headers="standard">총점 80점 이상시 수료</td>
+        <th id="people">정원</th>
+        <td headers="people">24명</td>
+      </tr>
+      <tr>
+        <td id="book">교재정보</td>
+        <td headers="book" colspan="3">
+          입문자를 위한 GIT과 HTML&amp;CSS<br />
+          HTML &amp; CSS 웹사이트 개발과 디자인 기초 &lpar;35,000원&rpar;
+        </td>
+      </tr>
     </table>
   </body>
 </html>
