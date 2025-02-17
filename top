@@ -1,0 +1,120 @@
+[33mcommit bda1caa6810dafd4a980226fcb7a526e7f25bafd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: chaeeun-nim <qlqldkdk0@gamil.com>
+Date:   Mon Feb 17 11:37:46 2025 +0900
+
+    정의형 목록에 대한 학습
+
+[33mcommit 388b17c2f8b9cbba8907d36df49173a148103067[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: chaeeun-nim <qlqldkdk0@gamil.com>
+Date:   Mon Feb 17 10:49:07 2025 +0900
+
+    순서형, 비순서형 목록에 관한 학습
+
+[33mcommit 9f8c89ec853b1060df52c88e52be5edbf4b3c7ba[m
+Author: chaeeun-nim <qlqldkdk0@gamil.com>
+Date:   Thu Feb 13 16:08:30 2025 +0900
+
+    공백 추가
+
+[33mcommit cd9d0bf4686506aa304c4f4b2c16c7d37a85ee93[m
+Author: chaeeun-nim <qlqldkdk0@gamil.com>
+Date:   Thu Feb 13 16:06:04 2025 +0900
+
+    중제목 수정
+
+[33mcommit 2537c092c073225eba20b4b872dd90eecb4a1b1f[m
+Author: chaeeun-nim <qlqldkdk0@gamil.com>
+Date:   Thu Feb 13 15:41:58 2025 +0900
+
+    앵커태그에 관한 학습
+
+[33mcommit c0c674eb4f9d03169083e3d52fd7f4f4a5806b7d[m
+Author: chaeeun-nim <qlqldkdk0@gamil.com>
+Date:   Thu Feb 13 13:42:47 2025 +0900
+
+    이미지와 피규어 요소 완성
+
+[33mcommit e8bbaf8ce33fe4d3107d2fd9493f967fd382a31a[m
+Author: chaeeun-nim <qlqldkdk0@gamil.com>
+Date:   Thu Feb 13 13:29:51 2025 +0900
+
+    피규어 요소 학습
+
+[33mcommit eb8e89fd84d51c9a4e31880e061fcfdce40ba025[m
+Author: chaeeun-nim <qlqldkdk0@gamil.com>
+Date:   Thu Feb 13 11:50:24 2025 +0900
+
+    이미지 요소 학습
+
+[33mcommit 68c3f24982d0482b3c258cf808f916637dc15cfa[m
+Author: chaeeun-nim <qlqldkdk0@gamil.com>
+Date:   Thu Feb 13 10:39:29 2025 +0900
+
+    제목과 단락 요소
+
+[33mcommit 6f401122682d9ce621880c5a67f6f92f61dc49c9[m
+Author: chaeeun-nim <qlqldkdk0@gamil.com>
+Date:   Wed Feb 12 16:20:57 2025 +0900
+
+    HTML 기본 명령어
+
+[33mcommit 9edc08cf0df7f26720fab5138517392de23ac43c[m
+Author: chaeeun-nim <qlqldkdk0@gamil.com>
+Date:   Wed Feb 12 16:18:49 2025 +0900
+
+    실습 예제 링크 목록
+
+[33mcommit 4fb16fe941968efe06320def64c75b6a05e640fd[m
+Author: chaeeun-nim <qlqldkdk0@gamil.com>
+Date:   Wed Feb 12 16:17:37 2025 +0900
+
+    프리티어 규칙 설정
+
+[33mcommit 83e2584ba688f5a05c804a38a5baf89f5197b685[m
+Author: seulbinim <seulbinim@gmail.com>
+Date:   Wed Feb 12 10:18:19 2025 +0900
+
+    NPM 스크립트 명령어 추가
+    - start (live-server)
+    - format (prettier)
+
+[33mcommit b4e363453379ec8a33a80f95e5c08ec18c3ed43b[m
+Author: seulbinim <seulbinim@gmail.com>
+Date:   Wed Feb 12 10:12:08 2025 +0900
+
+    프리티어 설정
+
+[33mcommit 2fb0905ddfc5d462cdbe998fbfb1b50fb82e6897[m
+Author: seulbinim <seulbinim@gmail.com>
+Date:   Wed Feb 12 09:46:12 2025 +0900
+
+    의존성 패키지 설치
+    - 라이브 서버
+    - 프리티어
+
+[33mcommit 6826979083af045823a73c5aeb7794c6bc181cae[m
+Author: seulbinim <seulbinim@gmail.com>
+Date:   Wed Feb 12 09:39:07 2025 +0900
+
+    .DS_Store 추가
+
+[33mcommit 5cc482a157482e00f923353bf94d53327bdeedba[m
+Author: seulbinim <seulbinim@gmail.com>
+Date:   Wed Feb 12 09:37:07 2025 +0900
+
+    버전 관리에서 제외할 파일 생성
+
+[33mcommit 99121ce3b580d1efbea87ea584b3ed808e0172fd[m
+Author: 슬비쌤 <seulbinim@gmail.com>
+Date:   Wed Feb 12 08:38:12 2025 +0900
+
+    Update README.md
+    
+    - .gitignore 생성 명령 삭제
+    - 의존성 패키지 설치 명령 추가
+
+[33mcommit 13575fffacbeca656e98bebd196093ae08641f49[m
+Author: seulbinim <seulbinim@gmail.com>
+Date:   Sun Feb 9 16:51:24 2025 +0900
+
+    README.md, Assets (Root Commit)
