@@ -26,5 +26,46 @@
       src="/src/assets/logo/netflix@1x.png"
       alt="넷플릭스"
     />
+    <!-- picture 안에 img 요소를 사용해야하고, figure 같은 경우에는 figcaption으로 설명을 덧붙일때 사용한다 -->
+    <!-- <figure>
+      <picture>
+        <img src="" alt="" srcset="" />
+      </picture>
+      <figcaption>이미지에 대한 설명</figcaption>
+    </figure> -->
+    <h2>W Descriptor 예시</h2>
+    <!-- <picture>
+      <img
+        src="/src/assets/rwd/small-550.jpg"
+        alt=""
+        srcset="
+          /src/assets/rwd/small-550.jpg    550w,
+          /src/assets/rwd/medium-1024.jpg 1024w,
+          /src/assets/rwd/large-1600.jpg  1600w,
+          /src/assets/rwd/normal-1920.jpg 1920w
+        "
+        sizes="(max-width:768px) 550px,
+        100vw
+        "
+      />
+    </picture> -->
+    <!-- 여기서 sizes에 100vw 이런식으로 주면 이미지 사이즈에 맞춰서 자동으로 돌아감..
+       쉽게생각해서 1024 이미지는 딱 1024까지에서 뜨고 1025가 되는순간 바로 다음으로 큰이미지로 변경됨.
+       하나하나 설정해주지않아도 가장 작은거 하나만 해놓고 100vw로 해두면 자동으로 반응형이 적용됨-->
+    <picture>
+      <source
+        srcset="/src/assets/rwd/small-550.jpg 550w"
+        media="(max-width:550px)"
+      />
+      <source
+        srcset="/src/assets/rwd/medium-1024.jpg 1024w"
+        media="(max-width:1024px)"
+      />
+      <source
+        srcset="/src/assets/rwd/large-1600.jpg 1600w"
+        media="(max-width:1280px)"
+      />
+      <img src="/src/assets/rwd/normal-1920.jpg" alt="" />
+    </picture>
   </body>
 </html>
