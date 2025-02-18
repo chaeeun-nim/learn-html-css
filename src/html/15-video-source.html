@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>video, source 요소</title>
+  </head>
+  <body>
+    <h1>video, source 요소</h1>
+    <!-- <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/vTDVGKbYZS0?si=MkJgMZaZv1hM0ETB"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe> -->
+    <video controls muted poster="/src/assets/video/poster.jpg">
+      <source
+        src="/src/assets/video/google-developer-stories.mp4"
+        type="video/mp4"
+      />
+      <track
+        src="/src/assets/video/stories-en.vtt"
+        kind="captions"
+        srclang="en"
+        label="English Caption"
+      />
+    </video>
+    <!-- 소스요소를 사욯하면 브라우저마다 맞춤 코덱으로 재생시킬수있지만 요즘엔,
+     mp4는 모든 브라우저가 지원하기떄문에 그냥 소스코드안써도됨
+    <video
+      src="/src/assets/video/google-developer-stories.mp4"
+      controls
+    ></video> -->
+  </body>
+</html>
