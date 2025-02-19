@@ -4,13 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>페이지의 제목</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        /* border-saping:0 으로 되어있어서, 줄사이 간격이 사라졌고, */
+        border-spacing: 0;
+        /* border-collapse: collapse; 속성으로 인해 완전히 딱 붙은 두줄을 한줄로 렌더링 시켜주었다. */
+        border-collapse: collapse;
+        text-align: center;
+      }
+      th,
+      td {
+        padding: 4px 16px;
+      }
+    </style>
   </head>
   <body>
-    <!-- pdf 링크 거는법 -->
-    <a
-      href="여기에 pdf 링크를 넣어주세요"
-      download="여기에 pdf 링크를 넣어주세요"
-      >클릭</a
-    >
+    <table>
+      <tr>
+        <th scope="col">Poster name</th>
+        <th scope="col">Color</th>
+        <th colspan="3" scope="colgroup">Sizes available</th>
+      </tr>
+      <tr>
+        <th rowspan="3">Zodiac</th>
+        <th scope="row">Full color</th>
+        <td>A2</td>
+        <td>A3</td>
+        <td>A4</td>
+      </tr>
+      <tr>
+        <th scope="row">Black and white</th>
+        <td>A2</td>
+        <td>A2</td>
+        <td>A3</td>
+      </tr>
+      <tr>
+        <th scope="row">Sepia</th>
+        <td>A3</td>
+        <td>A4</td>
+        <td>A5</td>
+      </tr>
+      <tr>
+        <th rowspan="2" scope="colgroup">Angels</th>
+        <th scope="row">Black and white</th>
+        <td>A2</td>
+        <td>A3</td>
+        <td>A4</td>
+      </tr>
+      <tr>
+        <th scope="row">Sepia</th>
+        <td>A2</td>
+        <td>A3</td>
+        <td>A5</td>
+      </tr>
+    </table>
   </body>
 </html>
