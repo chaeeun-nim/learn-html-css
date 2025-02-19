@@ -12,6 +12,8 @@
     <form action="/" method="post">
       <fieldset>
         <legend>폼 서식</legend>
+
+        <!-- 이름,텍스트 서식 -->
         <div>
           <label for="userName">이름</label>
           <input
@@ -21,15 +23,21 @@
             required
             aria-required="true"
             placeholder="예)껑껑이"
+            maxlength="5"
+            minlength="2"
           />
           <!-- input 속성중 required 속성은 필수 입력 항목이라고 표기됨.
            aria-required 는 wai-aria 임 스크린 리더에서도 필수입력 서식임을 알려줌
            div으로 폼만들때 주로 많이씀..ㅋㅋ-->
         </div>
+
+        <!-- 비밀번호 서식 -->
         <div>
           <label for="userPwd">비밀번호</label>
           <input type="password" id="userPwd" name="userPwd" />
         </div>
+
+        <!-- 검색서식 -->
         <div>
           <label for="likelionSearch">검색</label>
           <input
@@ -41,13 +49,69 @@
           />
         </div>
         <!-- 2025.02.19 -->
+
+        <!-- 이메일 서식 -->
         <div>
           <label for="userEmail">이메일</label>
           <input type="email" id="userEmail" name="userEmail" />
         </div>
-        <input type="submit" value="전송" />
+        <!-- 연락처 서식 -->
+        <div>
+          <label for="userPhone">연락처</label>
+          <input type="tel" id="userPhone" name="userPhone" />
+        </div>
+
         <!-- submit 은 전송버튼 valu 값은 텍스트로 노출이되고,
          input 버튼은 form action링크로 바로연결됨 -->
+
+        <!-- 체크박스 서식 -->
+        <div>
+          <input
+            type="checkbox"
+            name="classLikelion"
+            id="classHtml"
+            checked
+            value="HTML"
+          />
+          <label for="classHtml">HTML</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="classLikelion"
+            id="classCss"
+            value="Css"
+          />
+          <label for="classCss">CSS</label>
+        </div>
+        <div>
+          <input type="checkbox" name="classLikelion" id="classJs" value="Js" />
+          <label for="classJs">Javascript</label>
+        </div>
+
+        <!-- 라디오 서식 -->
+        <div>
+          <input
+            type="radio"
+            name="classRoom"
+            id="classRoom1"
+            checked
+            value="classRoom1"
+          />
+          <label for="classRoom1">회고 1팀</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            name="classRoom"
+            id="classRoom2"
+            value="classRoom2"
+          />
+          <label for="classRoom2">회고 2팀</label>
+        </div>
+
+        <!-- 전송버튼서식 -->
+        <input type="submit" value="전송" />
       </fieldset>
     </form>
     <!-- 한 줄 입력서식 끝 -->
