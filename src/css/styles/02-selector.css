@@ -1,0 +1,72 @@
+body {
+  background-color: ivory;
+}
+
+p {
+  color: brown;
+
+  &:hover {
+    background-color: aqua;
+  }
+
+  &:focus {
+    border: 10px solid red;
+  }
+}
+
+/* 클래스 선택자 */
+.like {
+  color: seagreen;
+}
+
+/* 아이디선택자 */
+#lion {
+  color: cornflowerblue;
+}
+[id='lion'] {
+  font-weight: bold;
+}
+
+/* 속성선택자 */
+[title] {
+  color: blueviolet;
+}
+
+a[href^='https'] {
+  text-decoration: none;
+}
+
+a[href$='pdf'] {
+  background-color: yellow;
+}
+
+/* 가상 클래스 선택자 */
+a:link {
+  color: red;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:hover {
+  color: burlywood;
+}
+
+a:focus {
+  color: darkgreen;
+  padding: 10px 20px;
+}
+
+a:active {
+  font-size: 60px;
+}
+
+/* 가상요소 선택자 */
+h1::before {
+  content: '멋사';
+}
+h1::after {
+  content: '13기';
+}
+/* 비포나 애프터 가상선택자에는 콘텐트 속성이 있어야한다. */
