@@ -3,21 +3,83 @@
 .member-service {
   background-color: yellow;
   text-transform: uppercase;
-  font-size: 1.25rem;
+  line-height: 1.5;
+  font-size: 0;
   font: 1.125rem, 'SUIT', sans-serif;
 }
 /* 태그 선택자 */
 /* 웹 브라우저 스타일(밑줄)을 재정의 */
 /* 웹 브라우저 스타일(색상)을 상속으로 재정의 */
 .item {
+  font-size: 0.875rem;
   text-decoration: none;
   color: inherit;
+  /* padding: 0 8px; */
+  background-color: palevioletred;
+  /* margin: 0 8px; */
 }
 /* a요소 이면서 가성요소 선택자 */
 .item::before {
   content: ':';
+  /* padding: 0 8px; */
+  margin: 16px;
 }
 /* a요소보다 우선순위가 높음 */
 .item.first:before {
   content: '';
+}
+/* ul 요소를 활용한 구조 */
+.member-link {
+  margin: 0;
+  padding: 0;
+  background-color: yellow;
+  font-size: 0;
+  vertical-align: center;
+  li {
+    line-height: 1.5;
+    font-size: 14px;
+    list-style: none;
+    color: black;
+    display: inline;
+    text-transform: uppercase;
+  }
+  a {
+    text-decoration: none;
+    background-color: aqua;
+  }
+  a:visited {
+    color: black;
+  }
+  span {
+    margin: 0 16px;
+  }
+}
+
+.ssam {
+  background-color: aqua;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+  font-size: 0;
+  /* text-align: right; */
+
+  li {
+    display: inline-block;
+
+    * {
+      display: inline-block;
+      font-size: 0.875rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+    padding: 8px;
+    background-color: green;
+  }
+  span {
+    margin: 0 8px;
+  }
 }
