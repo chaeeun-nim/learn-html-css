@@ -104,4 +104,22 @@
   }
 }
 
+.lion{
+  color: red;
+  border: 1px solid green;
+  padding: 0.5rem;
+
+  .parent{
+    border: none;
+    padding: inherit;
+
+    .child{
+      color: black;
+      border: 1px solid #000;
+      padding: inherit;
+      
+    }
+  }
+}
+
 
