@@ -1,0 +1,107 @@
+/* 전역 변수 정의 */
+@property --text-color{
+  syntax: "<color>";
+  inherits: false;
+  initial-value: orange;
+}
+
+:root {
+  /* 색상 팔레트 */
+  --white: #fff;
+  --black: #000;
+  --red: #f00;
+  --green: #0f0;
+  --blue: #00f;
+  --orange: orange;
+  --yellow:yellow;
+  --linght-blue:aqua;
+
+  /* 주요색상 */
+  --primary-color: var(--orange);
+  --secondary-color: var(--linght-blue);
+  --accent-color: var(--yellow);
+  --border-color:var(--red);
+
+  /* size */
+  --default: 1rem;
+  --small: .75rem;
+  --medium: 0.875rem;
+  --large: 1.125rem;
+}
+.text-card1{
+  /* --secondary-color: #852ecc; */
+  --bg-color:var(--green);
+  --border-color:var(--red);
+
+  /* 변수사용, 변수를 찾을 수 없을떄 콜백 #2ecc71 */
+  h1{
+    background-color: var(--bg-color);
+  }
+
+  p{
+    border-width: 10px;
+    border-style: solid;
+    border-color:var(--border-color);
+  }
+}
+
+.text-card2{
+  /* --secondary-color: #852ecc; */
+  --bg-color:var(--blue);
+  --border-color:var(--green);
+
+  /* 변수사용, 변수를 찾을 수 없을떄 콜백 #2ecc71 */
+  h1{
+    background-color: var(--bg-color);
+  }
+
+  p{
+    border-width: 10px;
+    border-style: solid;
+    border-color:var(--border-color);
+  }
+}
+
+.wrapper{
+
+  button{
+    font-size: var(--font-size); 
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+  }
+  button.open{
+    --font-size: var(--small);
+    --bg-color: var(--green);
+    --text-color: var(--red);
+
+  }
+  
+  button.close{
+    --font-size: var(--default);
+  }
+  
+  button.popup{
+    --font-size: var(--large);
+  }
+  
+  button.info{
+    --font-size: var(--medium);
+  }
+
+}
+
+.containter{
+  color: var(--text-color);
+  
+  .parent{
+    --text-color : blue;
+    
+    .child{
+      color: var(--text-color);
+      
+    }
+  }
+}
+
+
