@@ -10,9 +10,7 @@
   --state:#dbdbdb;
   --state-border:#fff;
 
-  border: 1px solid green;
   width: var(--size);
-  background-color: yellow;
   position: relative;
 
   img{
