@@ -11,10 +11,15 @@
   
   --color-gray200:#9B9A90;
 
-  --font-size-tittle:18px;
-  --font-size-summary:14px;
+  --font-size-tittle:1.125rem;
+  --font-size-summary:.875rem;
+  --font-size-info:.6875rem;
 
-  --spacing--20:20px;
+  --spacing--20:1.25rem;
+  --spacing--70:70px;
+  --spacing--8:8px;
+
+  --font-weight:600;
 }
 
 body *{
@@ -27,12 +32,53 @@ body *{
 }
 
 .li-wrapper{
-  --h2-font-size:var(--font-size-tittle);
-  
+  --h2-font-size : var(--font-size-tittle);
+  --time-font-size: var(--font-size-info);
+  --font-defualt-color : var(--color-gray200);
+  --padding-defualt:var(--spacing--20);
+  --padding-left:var(--spacing--70);
+
+  .alram{
+    padding: var(--spacing--20) var(--spacing--20) var(--spacing--20) var(--spacing--70);
+    box-shadow: 0px 0px 2px 0px rgba(114, 119, 124, 0.20);
+    margin: 20px;
+    position: relative;
+    border-radius: var(--spacing--8);
+    /* line-height: 1.25rem; */
+
+  }
+
+  .time{
+    font-weight: var(--font-weight);
+    position: absolute;
+    right: var(--spacing--20);
+    top: var(--spacing--20);
+    font-size: var(--time-font-size);
+  }
+
   .alram-title{
+
     font-size: var(--h2-font-size);
+    font-weight: var(--font-weight);
+    margin-bottom: var(--spacing--8);
+  }
+
+  p{
+    color: var(--font-defualt-color);
   }
 
 
-
 }
+.plant{
+  .alram-title, .time{
+    color: var(--color-green300);
+  }
+  background: url(/src/assets/svg/pot.svg) no-repeat 20px center;
+}
+.dinner{
+  .alram-title, .time{
+    color: var(--color-orange200);
+  }
+  background: url(/src/assets/svg/pot2.svg) no-repeat 20px center;
+}
+
