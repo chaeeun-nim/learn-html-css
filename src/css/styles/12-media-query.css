@@ -1,0 +1,28 @@
+@import url(/src/common/best-reset.css);
+@import url(/src/common/a11y.css);
+/* 모든 디바이스에 글자크기를 유연하게 설정 - vw*/
+
+/* 모든 디바이스 */
+body{
+  background: lightblue;
+  font-size: clamp(.75rem,2vw,2rem);
+
+  /* 뷰포트 크기에따라 */
+  @media (min-width:600px) and (max-width:1000px){
+      background-color: pink;
+  }
+  
+  /* 뷰포트 크기에따라 */
+  @media (min-width:1200px){
+      background-color: lightgreen;
+  }
+}
+
+
+
+/* 가로 보기 모드에서 적용될 배경색 */
+/* @media (orientation: landscape) {
+  body{
+    background-color: orange;
+  }
+} */
