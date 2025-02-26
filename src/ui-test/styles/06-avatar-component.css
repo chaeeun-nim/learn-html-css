@@ -1,0 +1,82 @@
+@import url(/src/common/modern-reset.css);
+@import url(/src/common/a11y.css);
+
+:root{
+  --face-width:4rem;
+  --color-online:#4cfe88;
+  --color-offline:#dbdbdb;
+  --white:#fff;
+  --spacing-20:20px;
+}
+
+body{
+  background-color: #e9e9e9;
+
+  *{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+  }
+}
+
+.img-state-wrap{
+  width: var(--face-width);
+  position: relative;
+  
+  .face-img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+  }
+  
+  .state{
+    box-sizing: border-box;
+    width: 25%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid var(--white);
+    background-color: red;
+    right: 0;
+    bottom: 0;
+
+    &.online{
+      background-color: var(--color-online);
+    }
+    &.offline{
+      background-color: var(--color-offline);
+    }
+  }
+}
+
+
+.face-btn{
+  width: var(--face-width);
+  position: relative;
+
+  .btn-img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+  }
+
+  &::after{
+    content: "";
+    box-sizing: border-box;
+    border: 2px solid var(--white);
+    width: 25%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  &.online::after{
+    background: var(--color-online);
+  }
+  &.offline::after{
+    background: var(--color-offline);
+  }
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아바타 컴포넌트</title>
+    <link
+      rel="shortcut icon"
+      href="/src/assets/favicon/likelion.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="/src/assets/favicon/likelion.svg" />
+    <link
+      rel="preload"
+      as="font"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2"
+    />
+    <link
+      rel="preload"
+      as="styles"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
+    />
+    <link rel="stylesheet" href="/src/ui-test/styles/06-avatar-component.css" />
+  </head>
+  <body>
+    <h1>인터렉션 없는 컴포넌트</h1>
+    <figure class="img-state-wrap">
+      <img class="face-img" src="/src/assets/face/face1.webp" alt="사용자명" />
+      <figcaption class="state online"><span class="sr-only">온라인</span></figcaption>
+    </figure>
+    <figure class="img-state-wrap">
+      <img class="face-img" src="/src/assets/face/face1.webp" alt="사용자명" />
+      <figcaption class="state offline"><span class="sr-only">온라인</span></figcaption>
+    </figure>
+    <h1>인터렉션 있는 컴포넌트</h1>
+    <button class="face-btn online" type="button" aria-label="온라인">
+      <img class="btn-img" src="/src/assets/face/face1.jpg" alt="사용자명" />
+    </button>
+    <button class="face-btn offline" type="button" aria-label="온라인">
+      <img class="btn-img" src="/src/assets/face/face1.jpg" alt="사용자명" />
+    </button>
+    
+  </body>
+</html>

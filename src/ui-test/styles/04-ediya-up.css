@@ -20,12 +20,17 @@ body{
   box-shadow: rgba(99, 99, 99, 0.2) 0px 1px 4px 0px;
   height: 50px;
   box-sizing: border-box;
+  @media(min-width:370px){
+    padding: 18px;
+  }
   
   
   .logo-wrap{
     float: left;
     padding: 18px;
-    
+    @media(min-width:370px){
+      padding: 0;
+    }
     img{
       display: block;
       height: 14px;
@@ -53,7 +58,8 @@ body{
 .pc-menu{
   position: absolute;
   right: 0;
-  padding: 14px 0;
+  line-height: 1;
+  /* padding: 14px 0; */
   
   li{
     float: right;
@@ -108,8 +114,6 @@ body{
   @media(min-width:370px){
     margin: 0;
   }
-
-  
 }
 strong{
   font-weight: bold;
