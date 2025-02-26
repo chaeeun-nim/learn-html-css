@@ -1,0 +1,68 @@
+
+
+body{
+  font-family: "SUIT", sans-serif;
+}
+
+/* 멤버 서비스 */
+a{
+  text-decoration-line: none;
+  color: inherit;
+  text-transform: uppercase;
+  
+}
+li{
+  list-style: none;
+}
+/* .member-service{
+  background: yellow;
+  float: right;
+  a::after{
+    content: '|';
+    margin: 0 20px;
+  }
+  a:first-child{
+    margin-left: 10px;
+  }
+  a:last-child::after{
+    content: '';
+  }
+} */
+.member-service{
+  background: yellow;
+  display: flow-root;
+
+  a{
+    /* background: lime; */
+    float: left;
+    text-transform: uppercase;
+  }
+
+  a:nth-child(n+2)::before{
+    content:"|";
+    margin: 0 0.5em;
+  }
+}
+
+/* 멤버 링크 */
+.member-link{
+  /* clear: both; */
+  background: pink;
+  display: flow-root;
+  padding: 0;
+  border: 1px solid red;
+
+  li{
+    float: left;
+    text-transform: uppercase;
+    span{
+      float: left;
+      margin: 0 0.5rem;
+    }
+
+    a{
+      padding: 0 20px;
+      float: left;
+    }
+  }
+}

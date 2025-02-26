@@ -1,0 +1,43 @@
+@import '/src/common/theme.css';
+body{
+  margin: 200px;
+}
+/* css로 특정 클래스 숨기는 방법 */
+/* .mom-friend-son{
+  display: none;
+} */
+
+/* float 사용하기 */
+.card{
+  background: var(--pastel-pink);
+  border: 1px solid green;
+  
+  
+  .thumbnail{
+    background: var(--pastel-yellow);
+    /* overflow: hidden; */
+    display: flow-root;
+    /* width: 100%; */
+    /* float: left; */
+    border: 1px solid red;
+
+    img{
+      /* position: relative; */
+      /* left: -50px; */
+      float: left;
+      width: 100px;
+      vertical-align: middle;
+      }
+  }
+
+  .subject{
+    background: var(--pastel-blue);
+    float: left;
+  }
+
+  .content{
+    clear: both;
+    background: var(--pastel-orange);
+    
+  }
+}

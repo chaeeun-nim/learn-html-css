@@ -1,0 +1,58 @@
+@import url(/src/common/modern-reset.css);
+body{
+  font-family: SUIT, sans-serif;
+}
+
+.card{
+  /* 독립적인 레이아웃을 가져야함 */
+  border: 2px solid #e6e6e6;
+  margin: 2em; 
+  border-radius: 0.5rem;
+  padding: 2em;
+  
+
+  &.good-partner{
+    display: flow-root;
+  }
+
+
+  .subject{
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    span{
+      vertical-align: top;
+
+      &[lang='en']{
+        font-size: 0.5em;
+        /* background: yellow; */
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+
+  .thumbnail{
+    --radius:50%;
+    
+    float: left;
+    border: 2px solid #e6e6e6;
+    margin: 1em;
+    padding: 0.625em;
+    border-radius: var(--radius);
+    width: 120px;
+    shape-outside: circle(50%);
+    
+    img{
+      border-radius: var(--radius);
+      aspect-ratio: 1/1;
+      width: 100%;
+      object-fit: cover;
+      object-position: 0 -20px;
+      }
+  }
+
+  .content{
+    margin-top: 10px;
+  }
+}
