@@ -2,6 +2,38 @@
 @import '/src/common/theme.css';
 
 /* 플렉스를 활용한 반응형 레이아웃 */
+/* 플렉스 컨테이너 */
+.container{
+
+  @media(min-width: 768px){
+    display: flex;
+    flex-flow: row wrap;
+  
+    .header, .navigation, .footer{
+      width: 100%;
+      inline-size: 100%;
+    }
+  
+    .content, .sidebar{
+      width: 50%;
+      height: 65vh;
+    }
+  }
+  @media(min-width: 1024px){
+    .header, .footer{
+      width: 100%;
+      inline-size: 100%;
+    }
+    .content{
+      width: 50%;
+      height: 80vh;
+    }
+    .navigation,.sidebar{
+      width: 25%;
+      height: 80vh;
+    }
+  }
+}
 
 /* 헤더 */
 .header {
@@ -14,22 +46,6 @@
   background: var(--pastel-green);
   height: 15vh;
 }
-
-/* 메인콘텐츠와 사이드바 그루핑 */
-.wrapper{
-  border: 1px solid red;
-
-  @media(min-width:768px){
-    display: flex;
-
-    .content, .sidebar{
-      flex: 1 0 0;
-      block-size: 65vh;
-    }
-
-  }
-}
-
 
 
 /* 메인 콘텐츠 */
