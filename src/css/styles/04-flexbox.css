@@ -1,0 +1,51 @@
+@import url(/src/common/theme.css);
+
+html,body{
+  font-family: 'SUIT',sans-serif;
+}
+
+body *, body *::before, body *::after{
+  box-sizing: border-box;
+
+}
+.case-01{
+  display: flex;
+  flex-flow: row wrap;
+  /* flex-direction: row; */
+  /* flex-wrap: nowrap; */
+  border: 1px solid red;
+  /* padding: 10px; */
+  inline-size: 622px;
+  block-size: 552px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px 10px;
+
+  [class*="item"]{
+    /* margin-block: 10px; */
+    border: 1px solid currentColor;
+    background-color: var(--pastel-yellow);
+    /* inline-size: 100px; */
+    /* block-size: 100px; */
+    text-align: center;
+    align-content: center;
+    /* line-height: 100px; 라인하이트를 늘려서 억지로 가운데맞춤 */
+
+  }
+
+  .item1{
+    /* inline-size: 200px; */
+    font-size: 48px;
+
+  }
+
+  .item2{
+    /* inline-size: 300px; */
+    font-size: 30px;
+  }
+
+  .item3{
+
+  }
+}
