@@ -32,6 +32,7 @@
     width: 2em;
     inline-size: 2em;
     
+    
     &::after{
       content: 'OFF';
       font-size: var(--font-md);
