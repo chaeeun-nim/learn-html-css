@@ -1,0 +1,102 @@
+@import '/src/common/best-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+/* 로고컴포넌트 */
+.brand{
+  .logo{
+    display: block;
+  }
+}
+
+/* 버튼 컴포넌트 */
+.button-circle{
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  border: 0;
+  border-radius: 50%;
+  background: #03CC5C linear-gradient(149deg, #06FD10 7.85%, #00E1CE 92.94%);
+  position: relative;
+
+  &::after{
+    content: "";
+    
+    position: absolute;
+    inset-inline-start: 50%;
+    inset-block-start: 50%;
+    translate: -50% -50%;
+
+    inline-size: .5rem;
+    block-size: .5rem;
+    border-radius: 50%;
+    background: #fff;
+  }
+}
+
+/* 입력서식 컨포넌트 */
+.input{
+  background: yellow;
+  display: flex;
+  flex-flow: row nowrap;
+
+  input{
+    flex: 1 0 0;
+    block-size: 1.5rem;
+    border: 1px solid lightgrey;
+    font-size: .875rem;
+    padding: .25rem .5rem;
+  }
+}
+
+/* 검색폼 */
+.form-search{
+  margin-block-start: 1.25rem;
+
+  fieldset{
+    border: 0;
+  }
+  .search-wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+
+    .input{
+      flex: 1 0 0;
+    }
+
+  }
+
+}
+
+.searchbar{
+  margin-block-start: 20px;
+  background-color: #fff;
+
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 12px;
+
+  padding: .75rem .75rem .75rem 1.25rem;
+  border: 1px solid #03CC5C;
+  border-radius: 1.5rem;
+  margin: 1.25rem 3.125rem;
+
+  &:focus-within{
+    box-shadow: 0px 4px 4px 0px rgba(68, 131, 63, 0.15) ;
+  }
+
+
+  .form-search{
+    margin-block-start: 0;
+    flex: 1 0 0;
+  }
+
+  input{
+    border: 0;
+
+    /* &:focus{
+      outline: none;
+    } */
+  }
+}

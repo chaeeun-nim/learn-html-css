@@ -1,0 +1,68 @@
+@import '/src/common/best-reset.css';
+@import '/src/common/theme.css';
+@import '/src/ui/components/avatar/avatar.css';
+
+body{
+  margin: 30px;
+}
+h1{
+  margin-block: 20px;
+}
+/* Stacking context */
+.case-01{
+  background-color: red;
+  display: flex;
+  flex-flow: row nowrap;
+
+  .button-avatar{
+    margin-right: -20px;
+    position: static;
+    /* filter: blur(5px); */
+    transition: all 500ms;
+    filter: grayscale(100%);
+    
+    &:hover, &:focus{
+      z-index: 10;
+      transform: scale(1.5) translate(0, -20px);
+      /* opacity: 0.8; */
+      /* translate:0 -20px; */
+      rotate: 1turn;
+      /* filter: none; */
+      filter: grayscale(0%);
+    }
+
+    &::after{
+      display: none;
+    }
+  }
+}
+
+/* transition */
+
+.case-02{
+ margin-block-start: 20px;
+ display: flex;
+ gap: 20px;
+
+ [class^="area"]{
+  inline-size: 100px;
+  block-size: 100px;
+  border: 1px solid currentColor;
+  text-align: center;
+  align-content: center;
+  background: var(--pastel-lavender);
+  /* transition-property: background, border-radius;
+  transition-duration: 0.2s, 0.1s;
+  transition-delay: 0s, 0.2s;
+  transition-timing-function: ease; */
+  /* transition: background 2s 0s ease, border-radius 1s 2s ease; */
+
+  transition: all 0.25s ease-in-out;
+
+  &:hover{
+    background: var(--pastel-lilac);
+    border-radius: 50%;
+    rotate: 2turn;
+  }
+ }
+}
