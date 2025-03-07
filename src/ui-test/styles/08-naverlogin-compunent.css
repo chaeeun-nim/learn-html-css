@@ -1,0 +1,214 @@
+@import url(/src/common/modern-reset.css);
+@import url(/src/common/base.css);
+@import url(/src/common/a11y.css);
+@import url(/src/ui-test/styles/08-naverlogin-var.css);
+
+/* body{
+  background: pink;
+ 
+} */
+
+/* 로고 컴포넌트 */
+.logo{
+  --logo-size:14.375rem;
+
+  display: block;
+  width: var(--logo-size);
+  inline-size: var(--logo-size);
+
+  svg{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.button{
+  --text-size:var(--bold16);
+  --paddig:var(--spacing-16);
+
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  font-size: var(--text-size);
+  font-weight: 700;
+  padding: var(--paddig) 0;
+  width: 100%;
+}
+.button:disabled{
+  background-color: var(--gray-20);
+}
+
+.checkbox-wrapper{
+  --text-size:var(--regular14);
+  --text-color:var(--black);
+  --box-height:var(--spacing-24);
+
+  display: inline-flex;
+  position: relative;
+  height: var(--box-height);
+
+  .checkbox-label{
+    align-content: center;
+    font-size: var(--text-size);
+    color: var(--text-color);
+    padding-left: var(--spacing-28);
+    background: url(/src/assets/naver/unchecked.svg) no-repeat 0 50%;
+  }
+
+  input.checkbox-input{
+    appearance: none;
+
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+
+  }
+
+  input.checkbox-input:checked + .checkbox-label{
+    background: url(/src/assets/naver/checked.svg) no-repeat 0 50%;
+  }
+}
+
+/* ip 보안 */
+.go-ip-page{
+  --text-size:var(--regular14);
+  --text-color:var(--black);
+
+  font-size: var(--text-size);
+  color: var(--text-color);
+  font-weight: 400;
+  display: inline-flex;
+  align-content: center;
+}
+
+/* 토글 버튼 */
+.toggle-wrapper{
+  --text-off-color:var(--gray-20);
+  --text-on-color:var(--primary);
+  
+  display: inline-flex;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 2em;
+  height: 1.125rem;
+  justify-content: start;
+  
+
+  
+  .toggle-input{
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+  }
+  
+
+  .toggle-label{
+    /* background-color: yellow; */
+    font-size: var(--bold14);
+    align-content: center;
+    
+    
+    
+    &::after{
+      content: 'off';
+      color: var(--text-off-color);
+    }
+  }
+
+  .toggle-input:checked + label{
+    
+    &::after{
+      content: 'on';
+      color: var(--text-on-color);
+  }
+}
+}
+
+.idinput-wrapper{
+  --padding-left:var(--spacing-8);
+  --small-font:.625rem;
+
+  /* background-color: yellow; */
+  width: 100%;
+  height: 3rem;
+  position: relative;
+  padding-left: var(--padding-left);
+  padding-top: var(--padding-left);
+  padding-bottom: var(--padding-left);
+  display: flex;
+  border: 1px solid var(--gray-20);
+  margin-bottom: 2.125rem;
+  
+
+  .id-label{
+    z-index: 10;
+    /* background-color: red; */
+    align-content: center;
+    transition: all ease-in-out .3s;
+    font-size: 1rem;
+    color: var(--gray-20);
+    
+  }
+  .id-input{
+    position: absolute;
+    /* background-color: yellow; */
+    bottom: .25rem;
+    left: var(--padding-left);
+    padding: 4px 0 4px 0;
+    font-size: .875rem;
+    border: 0;
+    width: calc(100% - var(--padding-left));
+    color: var(--black);
+    background: none;
+  }
+
+  &:has(.id-input:focus){
+    background-color: var(--blue-100);
+    box-shadow: 0 0 0 1px var(--blue-900);
+  }
+  .id-input:focus{
+    appearance: none;
+    outline: 0;
+    box-shadow: 0 0 0 0;
+    border: 0;
+  }
+
+  .id-input:user-valid + .id-label{
+    align-content: start;
+    font-size: var(--small-font);
+  }
+  .id-input:user-invalid + .id-label{
+    align-content: start;
+    font-size: var(--small-font);
+  }
+
+  &:has(.id-input:focus)>.id-label{
+    align-content: start;
+    font-size: var(--small-font);
+  }
+
+  .warning{
+    display: none;
+    position: absolute;
+    bottom: -1rem;
+    font-size: var(--small-font);
+    color: var(--warning);
+  }
+
+  .id-input:user-invalid + .id-label + .warning{
+    display: block;
+  }
+}
+
+
+

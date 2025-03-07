@@ -1,0 +1,49 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+body{
+  background-color: #000;
+  margin: 20px;
+  background: linear-gradient(to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84%);
+}
+.lang-wrapper{
+  /* background-color: red; */
+  display: grid;
+  
+  .global-icon, .select, .tri-icon{
+    grid-area: 1/1/2/2;
+    /* padding: .5rem; */
+  }
+  
+  .select{
+    color: #757575;
+    appearance: none;
+    /* padding-left: 1.75rem; */
+    background: transparent;
+    font-size: 1rem;
+    border-radius: 3px;
+    padding: .5rem .5rem .5rem 1.75rem;
+
+    option{
+      color: #000;
+    }
+  }
+  .global-icon{
+    place-self: center start;
+    margin: 0 .5rem;
+    pointer-events: none;
+  }
+  
+  .tri-icon{
+    place-self: center end;
+    margin: 0 .5rem;
+    pointer-events: none;
+  }
+
+  .select:focus{
+    outline: 0;
+    box-shadow: 0 0 0 3px #2ede75;
+  }
+}

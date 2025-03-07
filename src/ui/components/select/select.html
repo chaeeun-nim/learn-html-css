@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="shortcut icon"
+      href="/src/assets/favicon/likelion.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="/src/assets/favicon/likelion.svg" />
+    <link
+      rel="preload"
+      as="font"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2"
+    />
+    <link
+      rel="preload"
+      as="styles"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
+    />
+    <link rel="stylesheet" href="/src/ui/components/select/select.css" />
+  </head>
+  <body>
+    <h1>Select UI</h1>
+    <div class="lang-wrapper">
+      <img class="global-icon" role="none" src="/src/assets/icon/global.svg" alt="언어선택" />
+      <img class="tri-icon" role="none" src="/src/assets/icon/triangle.svg" alt="언어선택" />
+      <label for="lang" class="sr-only">언어선택</label>
+      <select name="lang" id="lang" class="select">
+        <option value="한국어">한국어</option>
+        <option value="english">English</option>
+      </select>
+    </div>
+  </body>
+</html>

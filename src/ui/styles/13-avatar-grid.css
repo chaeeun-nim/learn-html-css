@@ -1,0 +1,45 @@
+@import '/src/common/theme.css';
+@import '/src/common/modern-reset.css';
+
+@import url(/src/ui/components/avatar/avatar.css);
+
+.img-avatar, .state{
+  position: initial !important;
+}
+.grid-box{
+  background-color: yellow;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  border: 1px solid gray;
+  padding: 32px;
+  justify-items: center;
+}
+/* 그리드 활용 */
+/* .img-avatar{
+
+  display: grid;
+  
+  img, figcaption{
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  figcaption{
+    place-self: end;
+  }
+} */
+
+.img-avatar {
+  /* background: yellow; */
+  /* margin-block: 20px; */
+  /* margin-inline: auto; */
+  display: grid;
+
+  img, figcaption{
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  
+  figcaption {
+    place-self: end;
+  }
+}

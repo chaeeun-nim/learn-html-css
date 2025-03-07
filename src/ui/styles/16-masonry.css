@@ -1,0 +1,53 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+.masonry-layout{
+  columns: 300px;
+  background-color: yellow;
+  padding: 20px;
+  column-gap: 2em;
+  /* gap: 20px; */
+  
+  figure{
+    break-inside: avoid;
+    padding: 20px;
+    border: 1px solid #000;
+    position: relative;
+    margin: 2em 0;
+    /* margin-bottom: 20px; */
+
+    &:first-child{
+      margin: 0;
+
+    }
+    
+    img{
+      transition: all ease-in-out .5s;
+      width: 100%;
+      filter: sepia(1);
+    }
+    figcaption{
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      
+      background-color: #0000008a;
+      width: calc(100% - 40px);
+      height: 20%;
+      color: white;
+      text-align: center;
+      align-content: center;
+    }
+
+    &:hover{
+      img{
+        filter: sepia(0);
+      }
+    }
+  }
+
+
+
+}

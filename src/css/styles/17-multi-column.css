@@ -1,0 +1,62 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+.container{
+  background-color: var(--pastel-aqua);
+  padding: 1em;
+
+  .case{
+    border: 1px solid red;
+    margin-block: 20px;
+  }
+
+  /* case-01 */
+  .case-01{
+    column-width: 15rem;
+    column-rule: 1px solid red;
+    column-gap: 2rem;
+  }
+  /* column-sapn:all 을 하려면 block요소여야한다. */
+  .case-02{
+    column-count: 4;
+    column-rule: 3px dotted red;
+    
+    span{
+      background-color: var(--pastel-dark-blue);
+      color: var(--white);
+      padding: .5rem;
+      column-span: all;
+      display: block;
+      column-fill: balance;
+    }
+  }
+
+  .case-03{
+    columns: 10rem auto;
+    column-rule: 4px double red;
+  }
+  .case-04{
+    columns: 2;
+    column-fill: balance;
+  }
+  .case-05{
+    columns: 2;
+    column-fill: auto;
+    height: 100px;
+  }
+}
+
+
+.wrapper{
+  background-color: var(--pastel-lemon);
+  padding: 1rem;
+  columns: 3;
+  
+  .case{
+    /* display: inline; */
+    /* break-after: always; */
+
+  }
+}

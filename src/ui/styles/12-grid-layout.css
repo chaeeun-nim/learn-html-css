@@ -1,0 +1,99 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+
+.container{
+  display: grid;
+  padding: 0 20px;
+
+  /* .navigation{
+    order: 1;
+  } */
+  /* grid-template-rows: repeat(12, 1fr); */
+  /* grid-template-columns: repeat(12,1fr); */
+  /* height: 100vh; */
+
+  @media(min-width: 768px){
+    grid-template-columns: repeat(12, 1fr);
+    max-width: 800px;
+    max-inline-size: 800px;
+    margin: 0 auto;
+
+    .header, .navigation, .footer{
+      grid-column: 1 / -1;
+    }
+
+    .content, .sidebar{
+      grid-column: span 6;
+    }
+  }
+
+  @media(min-width:1024px){
+    max-width: 1280px;
+    max-inline-size: 1280px;
+    .navigation, .sidebar{
+      grid-column: span 3;
+    }
+  }
+
+}
+
+
+/* 헤더 */
+.header {
+  background: var(--pastel-coral);
+  height: 10vh;
+  /* grid-area: 1/1/3/13; */
+
+  
+}
+
+/* 내비게이션 */
+.navigation {
+  background: var(--pastel-green);
+  height: 15vh;
+  /* grid-area: 3/1/5/13;
+
+  @media(min-width:1200px){
+    grid-area: 3/1/11/4;
+  } */
+}
+
+
+/* 메인 콘텐츠 */
+.content {
+  background: var(--pastel-aqua);
+  height: 40vh;
+  /* grid-area: 5/1/8/13;
+
+  @media(min-width:768px){
+    grid-area: 5/1/11/7;
+  }
+
+  @media(min-width:1200px){
+    grid-area: 3/4/11/10;
+  } */
+
+}
+
+/* 사이드 바 */
+.sidebar {
+  background: var(--pastel-yellow);
+  height: 25vh;
+  /* grid-area: 8/1/11/13;
+
+  @media(min-width:768px){
+    grid-area: 5/7/11/13;
+  }
+
+  @media(min-width:1200px){
+    grid-area: 3/4/11/10;
+  } */
+  
+}
+
+/* 푸터 */
+.footer {
+  background: var(--pastel-lavender);
+  height: 10vh;
+  /* grid-area: 11/1/13/13; */
+}
