@@ -1,0 +1,245 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+@import url(/src/ui/components/button/button.css);
+
+:root{
+  color-scheme: light dark;
+}
+
+body{
+  margin: 40px;
+  background: light-dark(#e9e9e9, #1a1a1f);
+  color: light-dark(#101016,#fff);
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+  grid-auto-rows: 18.75rem;
+  gap: 1.25rem;
+}
+
+.case{
+  /* border: 1px solid light-dark(#1f1f25,#fff); */
+  border-radius: 10px;
+  padding: 2.5rem;
+  background: light-dark(#fff, #25252c);
+  box-shadow: 0 0 5px 1px #cfcfcfab;
+
+  @media (prefers-color-scheme:dark) {
+     border: 0; 
+     box-shadow: 0 0 5px 1px #000000ab;
+    }
+
+  button{
+    border-radius: 4px;
+    padding: .5em 1em;
+    
+  }
+
+  .toggle-animation {
+    background-color: light-dark(#6060f5,#1f1f25);
+    border: 1px solid light-dark(#6060f5,#01c4ff);
+    color: light-dark(#fff,#01c4ff);
+  }
+  
+  .toggle-animation.paused {
+    background-color: light-dark(#e03131,#e03131);
+    color: #fff;
+    border: #e03131;
+
+  }
+  
+  .reset-animation {
+    background-color: light-dark(#12e435,#1f1f25);
+    border: 1px solid light-dark(#12e435,#12e435);
+    color: light-dark(#fff,#12e435);
+  }
+
+  .target-animation {
+    margin-top: 20px;
+    font-size: 2rem;
+    text-align: center;
+    align-content: center;
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+    background: linear-gradient(135deg, #29dce2, #2b398a);
+  }
+}
+strong{
+  /* color: red; */
+  display: block;
+  margin-bottom: 14px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+/* fade 애니메이션 */
+@keyframes fade {
+  0%, 100%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  
+}
+.case-01 .target-animation{
+  /* animation-name: fade;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards; */
+  /* animation-direction:alternate-reverse ; */
+  
+  animation: fade 3s infinite 1s linear both;
+  animation-play-state: paused;
+}
+
+@keyframes shrink {
+  0%{
+    width: 100%;
+  }
+  50%{
+    width: 50%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+.case-02 .target-animation{
+  animation: shrink 2s infinite ease-in-out both;
+  animation-play-state: paused;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 100%{ translate: 0 0;}
+  50%{ translate: 0 -20px; }
+}
+.case-03 .target-animation{
+  animation: bounce 2s infinite ease-in-out both;
+  animation-play-state: paused;
+}
+
+/* Shake Animation */
+@keyframes shake {
+  0%, 100% { transform: translateX(15px); }
+  50% { transform: translateX(-15px); }
+}
+.case-04 .target-animation {
+  animation: shake 1.5s infinite ease-in-out;
+  animation-play-state: paused;
+}
+
+/* Spin Animation */
+@keyframes spin {
+  0% { rotate: 0turn;}
+  100% {  rotate: 1turn }
+}
+.case-05 .target-animation {
+  width: 120px;
+  height: 120px;
+  margin: 20px auto;
+  border-radius: 50%;
+  background: conic-gradient(#2973e2, #2b448a);
+
+  animation: spin 1.5s infinite linear;
+  animation-play-state: paused;
+}
+
+/* Pulse Ainimation */
+@keyframes pulse {
+  0%, 100% { scale: 1 1; }
+  50% { scale: 1.1 1.1;  }
+}
+.case-06 .target-animation {
+  animation: pulse 1.5s infinite ease-in-out;
+  animation-play-state: paused;
+}
+
+@keyframes flip {
+  0% {
+    transform: perspective(400px) rotateY(0);
+  }
+  100% {
+      transform: perspective(400px) rotateY(360deg);
+  }
+}
+.case-07 .target-animation {
+  animation: flip 2s infinite ease-in-out;
+  animation-play-state: paused;
+}
+
+/* Wobble Animation */
+@keyframes wobble {
+  0%, 100% { transform: translateX(0%) rotate(0deg); }
+  15% { transform: translateX(-15px) rotate(-5deg); }
+   30% { transform: translateX(10px) rotate(3deg); }
+    45% { transform: translateX(-10px) rotate(-3deg); }
+     60% { transform: translateX(5px) rotate(2deg); } 
+     75% { transform: translateX(-5px) rotate(-1deg); }
+}
+.case-08 .target-animation {
+  animation: wobble 2s infinite ease-in-out;
+  animation-play-state: paused;
+}
+
+/* Glow Animation */
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px light-dark(rgb(0 0 0 /0.5), rgb(255 255 255 /0.5)); }
+  50% { box-shadow: 0 0 10px light-dark(rgb(0 0 0 /0.6), rgb(255 255 255 /0.6)); }
+}
+.case-09 .target-animation {
+  animation: glow 2s infinite ease-in-out both;
+  animation-play-state: paused;
+}
+
+
+@property --rotation {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes rotate {
+  from {
+    --rotation: 0deg;
+  }
+  to {
+    --rotation: 360deg;
+  }
+}
+
+.case-10 .target-animation {
+  width: 130px;
+  aspect-ratio: 1/1;
+  position: relative;
+  box-sizing: content-box;
+  background-color: light-dark(#6060f5,#1f1f25);
+
+  &::before, &::after{
+    --rotation: 0deg;
+    box-sizing: content-box;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 50%;
+    translate: -50% -50%;
+    background: conic-gradient(from var(--rotation), red, blue, red);
+    padding: 3px;
+    z-index: -1;   
+    border-radius: 8px;
+    animation: rotate 1s infinite linear;
+    animation-play-state: paused;
+  }
+
+  &::before{
+    filter: blur(100px);
+  }
+}
